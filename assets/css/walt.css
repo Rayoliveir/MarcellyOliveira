@@ -1,0 +1,56 @@
+.quote-section {
+    padding: 100px 10%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto com a imagem */
+    max-width: 1100px;
+    gap: 60px;
+}
+
+.quote-image {
+    flex: 1;
+}
+
+.quote-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px; /* Bordas arredondadas suaves */
+    display: block;
+}
+
+.quote-content {
+    flex: 1;
+}
+
+.quote-content blockquote {
+    font-family: serif; /* Mantendo a consistência dos títulos */
+    font-size: 28px;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.quote-content cite {
+    font-size: 14px;
+    color: #777;
+    font-style: normal;
+    font-family: sans-serif;
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    .quote-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .quote-content blockquote {
+        font-size: 22px;
+    }
+}

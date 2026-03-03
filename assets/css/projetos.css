@@ -1,0 +1,72 @@
+.projetos {
+    padding: 80px 10% ;
+    display: flex;
+    justify-content: center;
+}
+
+.projetos-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Lado da Lista */
+.projetos-lista {
+    flex: 1; /* Ocupa metade do espaço */
+}
+
+.projetos-lista h2 {
+    font-family: serif;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.projeto-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee; /* Linha horizontal acima do item */
+}
+
+/* Opcional: Adicionar linha no último item também */
+.projeto-item:last-child {
+    border-bottom: 1px solid #eee;
+}
+
+.numero {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 40px;
+    color: #333;
+    min-width: 20px;
+}
+
+.nome {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Lado da Imagem */
+.projetos-imagem {
+    flex: 1;
+}
+
+.projetos-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px; /* Bordas arredondadas como na imagem */
+    object-fit: cover;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column;
+    }
+    
+    .projetos-imagem {
+        order: -1; /* Joga a imagem para cima no celular se preferir */
+    }
+}

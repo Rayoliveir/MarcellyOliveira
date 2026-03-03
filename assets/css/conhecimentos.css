@@ -1,0 +1,66 @@
+.conhecimentos {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.superior-centro h3 {
+    font-size: 45px;
+    font-family: serif;
+    margin: 10px 0;
+}
+
+.superior-centro p {
+    color: gray;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 14px;
+}
+
+/* Tabela */
+.tabela-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabela-specs {
+    width: 100%;
+    border-collapse: collapse; /* Une as bordas */
+    table-layout: fixed; /* Mantém as colunas com larguras iguais */
+}
+
+.tabela-specs th {
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-specs td {
+    padding: 20px 30px;
+    font-size: 13px;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-family: monospace; /* Fonte estilo código da imagem */
+}
+
+/* O "Efeito de Cartão" na primeira coluna */
+.destaque-col {
+    position: relative;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+/* Arredondamento do topo da primeira coluna */
+thead th.destaque-col {
+    border-top: 1px solid #eee;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Arredondamento da base da primeira coluna */
+tbody tr:last-child td.destaque-col {
+    border-bottom: 1px solid #eee;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

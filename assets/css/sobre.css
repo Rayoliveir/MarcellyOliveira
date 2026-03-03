@@ -1,0 +1,76 @@
+/* Reset básico para ajudar no alinhamento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Ajuste para a fonte de sua preferência */
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.superior {
+    width: 100%;
+    max-width: 1200px; /* Limita a largura para não espalhar muito */
+    margin-bottom: 50px;
+}
+
+.superior span {
+    font-size: 14px;
+    color: olive;
+    font-family: 'Courier New', Courier, monospace; /* Estilo retro/code da imagem */
+}
+
+.superior h3 {
+    font-size: 48px;
+    margin: 15px 0;
+    font-family: serif; /* O título na imagem parece ter serifa */
+}
+
+.superior p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os cards */
+    max-width: 1200px;
+    flex-wrap: wrap; /* Garante que quebre linha em telas menores */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    /* Aqui está o segredo da linha superior */
+    border-top: 1px solid #ddd; 
+    padding-top: 20px;
+}
+
+.card img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 20px;
+    /* Se quiser a cor verde oliva no ícone via CSS: */
+    filter: sepia(1) saturate(5) hue-rotate(50deg); 
+}
+
+.card h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: serif;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}

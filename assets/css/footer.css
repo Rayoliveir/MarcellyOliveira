@@ -1,0 +1,64 @@
+.rodape {
+    padding: 60px 10%;
+    border-top: 1px solid #eee; /* Linha fina superior que aparece na imagem */
+    background-color: #fff;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape-nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px; /* Espaçamento grande entre nav e copyright */
+}
+
+.rodape-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.rodape-nav a:hover {
+    opacity: 0.6;
+}
+
+.rodape-copy {
+    display: flex;
+    justify-content: space-between; /* Alinha um em cada ponta */
+    align-items: center;
+}
+
+.rodape-copy p {
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo máquina de escrever */
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.autor {
+    color: olive; /* Verde oliva para o nome */
+}
+
+.direitos {
+    color: olive;
+    letter-spacing: 1px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .rodape-copy {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .rodape-nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+}
