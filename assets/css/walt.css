@@ -7,7 +7,7 @@
 
 .quote-container {
     display: flex;
-    align-items: center; /* Centraliza verticalmente o texto com a imagem */
+    align-items: center; 
     max-width: 1100px;
     gap: 60px;
 }
@@ -19,7 +19,7 @@
 .quote-image img {
     width: 100%;
     max-width: 450px;
-    border-radius: 30px; /* Bordas arredondadas suaves */
+    border-radius: 30px; 
     display: block;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .quote-content blockquote {
-    font-family: serif; /* Mantendo a consistência dos títulos */
+    font-family: serif; 
     font-size: 28px;
     line-height: 1.4;
     color: #1a1a1a;
@@ -43,7 +43,6 @@
     font-family: sans-serif;
 }
 
-/* Ajuste para Mobile */
 @media (max-width: 768px) {
     .quote-container {
         flex-direction: column;

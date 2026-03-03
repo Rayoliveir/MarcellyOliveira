@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Ramadhan'; 
+    src: url('../font/RamadhanMubarok-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
 .hero {
-    height: 85vh; /* Ocupa 80% da altura da tela */
+    height: 85vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,8 +22,8 @@
 
 .hero-subtitle {
     display: block;
-    font-family: 'Courier New', Courier, monospace; /* Estilo técnico do rodapé */
-    color: olive; /* Cor de destaque usada no seu projeto */
+    font-family: 'Courier New', Courier, monospace; 
+    color: olive; 
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
@@ -23,8 +31,8 @@
 }
 
 .hero-title {
-    font-family: serif; /* Fonte elegante das seções Projetos e Contato */
-    font-size: clamp(48px, 8vw, 100px); /* Tamanho responsivo */
+    font-family: Ramadhan; 
+    font-size: clamp(68px, 8vw, 400px); 
     font-weight: normal;
     color: #1a1a1a;
     line-height: 1.1;
@@ -46,7 +54,6 @@
     justify-content: center;
 }
 
-/* Botão principal em verde oliva como o "Learn More" */
 .btn-principal {
     background-color: #4b5d16;
     color: white;
@@ -57,7 +64,6 @@
     transition: transform 0.3s ease;
 }
 
-/* Botão secundário apenas com texto e seta */
 .btn-secundario {
     color: #1a1a1a;
     padding: 15px 20px;

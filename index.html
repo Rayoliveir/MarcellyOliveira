@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | FullStack Developer</title>
+    <title>Marcelly Oliveira | FullStack Developer</title>
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/hero.css">
     <link rel="stylesheet" href="assets/css/sobre.css">
@@ -14,12 +14,15 @@
     <link rel="stylesheet" href="assets/css/contato.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="logo">MO</div>
+        <div class="logo"><a href="#hero">MO</a></div>
         <nav class="nav-links">
             <a href="#sobre">sobre mim</a>
             <a href="#projetos">projetos</a>
@@ -27,16 +30,17 @@
             <a href="#contato">contate-me</a>
         </nav>
         <div class="header-socials">
-            <a href="https://github.com/seuusuario" target="_blank" aria-label="GitHub"><i
+            <a href="https://github.com/Rayoliveir" target="_blank" aria-label="GitHub"><i
                     class="fa-brands fa-github"></i></a>
             <a href="https://linkedin.com/in/seuusuario" target="_blank" aria-label="LinkedIn"><i
                     class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://instagram.com/seuusuario" target="_blank" aria-label="Instagram"><i
+            <a href="https://instagram.com/Ray_ol1" target="_blank" aria-label="Instagram"><i
                     class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <span class="hero-subtitle">Engenheira de Software & FullStack Developer</span>
             <h1 class="hero-title">Marcelly Oliveira</h1>
@@ -51,7 +55,7 @@
         </div>
     </section>
 
-    <section class="sobre">
+    <section class="sobre" id="sobre">
         <div class="superior">
             <span>Sobre Mim</span>
             <h3>Quem sou eu?</h3>
@@ -92,49 +96,123 @@
         </div>
     </section>
 
-    <section class="projetos">
+    <section class="projetos" id="projetos">
         <div class="projetos-container">
             <div class="projetos-lista">
                 <h2>Projetos</h2>
 
-                <div class="projeto-item">
-                    <span class="numero">01</span>
-                    <span class="nome">Portifolio Pessoal</span>
-                </div>
+                <!-- portifolio -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
 
-                <div class="projeto-item">
-                    <span class="numero">02</span>
-                    <span class="nome">CodeSpark</span>
-                </div>
+                        <div class="swiper-slide">
+                            <div class="projeto-card">
+                                <div class="card-image">
+                                    <img src="assets/img/portifolio.png" alt="Projeto 1">
+                                    <div class="card-overlay">
+                                        <div class="projeto-links">
+                                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="projeto-tag">Frontend</span>
+                                    <h3>Portfólio Pessoal</h3>
+                                    <div class="projeto-techs">
+                                        <i class="devicon-html5-plain"></i>
+                                        <i class="devicon-css3-plain"></i>
+                                        <i class="devicon-javascript-plain"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CodeSpark -->
+                        <div class="swiper-slide">
+                            <div class="projeto-card">
+                                <div class="card-image">
+                                    <img src="assets/img/codespark.png" alt="Projeto 2">
+                                    <div class="card-overlay">
+                                        <div class="projeto-links">
+                                            <a href="https://github.com/Rayoliveir/CodeSpark" target="_blank"><i
+                                                    class="fab fa-github"></i></a>
+                                            <a href="https://code-spark-two.vercel.app/" target="_blank"><i
+                                                    class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="projeto-tag">Full Stack</span>
+                                    <h3>CodeSpark</h3>
+                                    <div class="projeto-techs">
+                                        <i class="devicon-react-original"></i>
+                                        <i class="devicon-typescript-plain"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- desafio 20 dias -->
+                        <div class="swiper-slide">
+                            <div class="projeto-card">
+                                <div class="card-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Projeto 3">
+                                    <div class="card-overlay">
+                                        <div class="projeto-links">
+                                            <a href="#"><i class="fab fa-github"></i></a>
+                                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="projeto-tag">Frontend</span>
+                                    <h3>Desafio 20 Dias</h3>
+                                    <div class="projeto-techs">
+                                        <i class="devicon-figma-plain"></i>
+                                        <i class="devicon-sass-original"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- GuitarWave -->
+                        <div class="swiper-slide">
+                            <div class="projeto-card">
+                                <div class="card-image">
+                                    <img src="assets/img/guitarwave.png" alt="Projeto 3">
+                                    <div class="card-overlay">
+                                        <div class="projeto-links">
+                                            <a href="https://github.com/Rayoliveir/GuitarWave" target="_blank"><i
+                                                    class="fab fa-github"></i></a>
+                                            <a href="https://guitar-wave.vercel.app/" target="_blank"><i
+                                                    class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-content">
+                                    <span class="projeto-tag">Frontend</span>
+                                    <h3>Guitar Wave</h3>
+                                    <div class="projeto-techs">
+                                        <!-- <i class="devicon-figma-plain"></i> -->
+                                        <i class="devicon-html5-plain"></i>
+                                        <i class="devicon-css3-plain"></i>
+                                        <i class="devicon-javascript-plain"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="projeto-item">
-                    <span class="numero">03</span>
-                    <span class="nome">Desafio 20 Dias</span>
-                </div>
-
-                <div class="projeto-item">
-                    <span class="numero">04</span>
-                    <span class="nome">Em Breve...</span>
-                </div>
-                <div class="projeto-item">
-                    <span class="numero">04</span>
-                    <span class="nome">Em Breve...</span>
-                </div>
-                <div class="projeto-item">
-                    <span class="numero">04</span>
-                    <span class="nome">Em Breve...</span>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
 
-            <div class="projetos-imagem">
-                <img src="assets/img/walt.jpg" alt="Destaque Projetos">
-            </div>
-        </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="assets/js/projetos.js"></script>
     </section>
 
-    <section class="conhecimentos">
+    <section class="conhecimentos" id="conhecimentos">
         <div class="superior-centro">
-            <span>Specs</span>
+            <!-- <span>Specs</span> -->
             <h3>Conhecimentos</h3>
             <p>You need a solution that keeps up. That’s why we developed Area. A developer-friendly approach to
                 streamline your business.</p>
@@ -151,34 +229,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="destaque-col">✓ Ultra-fast browsing</td>
-                        <td>✓ Fast browsing</td>
-                        <td>✕ Moderate speeds</td>
+                        <td class="destaque-col">✓ HTML5</td>
+                        <td>✓ Java</td>
+                        <td>✓ Python</td>
                     </tr>
                     <tr>
-                        <td class="destaque-col">✓ Advanced AI insights</td>
-                        <td>✓ Basic AI recommendations</td>
-                        <td>✕ No AI assistance</td>
+                        <td class="destaque-col">✓ CSS3</td>
+                        <td>✓ C#</td>
+                        <td>✓ ...</td>
                     </tr>
                     <tr>
-                        <td class="destaque-col">✓ Seamless integration</td>
-                        <td>✓ Restricts customization</td>
-                        <td>✕ Steep learning curve</td>
+                        <td class="destaque-col">✓ Angular</td>
+                        <td>✓ SpringBoot</td>
+                        <td>✓ Pandas</td>
                     </tr>
                     <tr>
-                        <td class="destaque-col">✓ Advanced AI insights</td>
-                        <td>✕ Basic AI insights</td>
-                        <td>✕ No AI assistance</td>
+                        <td class="destaque-col">✓ ...</td>
+                        <td>✓ ...</td>
+                        <td>✓ ...</td>
                     </tr>
                     <tr>
-                        <td class="destaque-col">✓ Ultra-fast browsing</td>
-                        <td>✓ Fast browsing</td>
-                        <td>✕ Moderate speeds</td>
+                        <td class="destaque-col">✓ ...</td>
+                        <td>✓ ...</td>
+                        <td>✓ ...</td>
                     </tr>
                     <tr>
-                        <td class="destaque-col">✓ Full UTF-8 support</td>
-                        <td>✕ Potential display errors</td>
-                        <td>✕ Partial UTF-8 support</td>
+                        <td class="destaque-col">✓ ...</td>
+                        <td>✓ ...</td>
+                        <td>✓ ...</td>
                     </tr>
                 </tbody>
             </table>
@@ -218,7 +296,8 @@
 
                 <div class="contato-card">
                     <span class="label">LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/marcelly-oliveira-4a89a3301/" target="_blank" class="link-direto">Conectar
+                    <a href="https://www.linkedin.com/in/marcelly-oliveira-4a89a3301/" target="_blank"
+                        class="link-direto">Conectar
                         profissionalmente ↗</a>
                 </div>
 
@@ -243,7 +322,7 @@
             </nav> -->
 
             <div class="rodape-copy">
-                <p class="autor">© Marcelly Oliveira 2026</p>
+                <p class="autor">&copy; Marcelly Oliveira 2026</p>
                 <p class="direitos">TODOS DIREITOS RESERVADOS</p>
             </div>
         </div>

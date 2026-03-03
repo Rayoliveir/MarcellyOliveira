@@ -16,7 +16,6 @@
     font-size: 14px;
 }
 
-/* Tabela */
 .tabela-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -24,8 +23,8 @@
 
 .tabela-specs {
     width: 100%;
-    border-collapse: collapse; /* Une as bordas */
-    table-layout: fixed; /* Mantém as colunas com larguras iguais */
+    border-collapse: collapse;
+    table-layout: fixed; 
 }
 
 .tabela-specs th {
@@ -41,24 +40,21 @@
     color: #444;
     border-bottom: 1px solid #eee;
     text-align: left;
-    font-family: monospace; /* Fonte estilo código da imagem */
+    font-family: monospace; 
 }
 
-/* O "Efeito de Cartão" na primeira coluna */
 .destaque-col {
     position: relative;
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
 }
 
-/* Arredondamento do topo da primeira coluna */
 thead th.destaque-col {
     border-top: 1px solid #eee;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-/* Arredondamento da base da primeira coluna */
 tbody tr:last-child td.destaque-col {
     border-bottom: 1px solid #eee;
     border-bottom-left-radius: 15px;
