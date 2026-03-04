@@ -51,4 +51,4 @@ Se este projeto te inspirou de alguma forma, não esqueça de deixar uma **estre
 
 ---
 
-<img src="assets/img/portifolioPage.png">
+<img src="assets/img/portifolio.png">
