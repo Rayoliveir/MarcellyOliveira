@@ -1,7 +1,21 @@
+:root {
+    /* Primary Color Palette */
+    --hot-fuchsia: #F8004D;
+    --wheat: #F3D8AF;
+    --cotton-rose: #EBBDBF;
+    --sunflower-gold: #E9B849;
+    --espresso: #4A2114;
+    --crimson-violet: #681B3A;
+    --almond-cream: #F4E3D4;
+    --carmine: #BA143A;
+    --space-indigo: #1B1C4B;
+    --toffee-brown: #915D3C;
+}
+
 .contato-mercado {
     padding: 120px 8%;
     background-color: #ffffff; 
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--almond-cream);
 }
 
 .contato-wrapper {
@@ -15,33 +29,34 @@
 
 .contato-info .tag {
     font-family: monospace;
-    color: #4b5d16; 
+    color: var(--crimson-violet); 
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    background: #f0f2eb;
-    padding: 5px 12px;
+    letter-spacing: 1.5px;
+    background: var(--almond-cream);
+    padding: 6px 14px;
     border-radius: 4px;
+    font-weight: 600;
 }
 
 .contato-info h2 {
     font-family: serif;
     font-size: clamp(32px, 5vw, 56px);
     margin: 25px 0;
-    line-height: 1.1;
-    color: #1a1a1a;
+    line-height: 1.2;
+    color: var(--espresso);
 }
 
 .contato-info p {
     font-size: 18px;
-    color: #555;
+    color: var(--toffee-brown);
     max-width: 450px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .contato-card {
     margin-bottom: 40px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--cotton-rose);
     padding-bottom: 15px;
 }
 
@@ -49,40 +64,44 @@
     display: block;
     font-size: 12px;
     text-transform: uppercase;
-    color: #888;
+    color: var(--sunflower-gold);
     margin-bottom: 8px;
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .link-direto {
     font-size: 20px;
-    color: #1a1a1a;
+    color: var(--espresso);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .link-direto:hover {
-    color: #4b5d16;
+    color: var(--hot-fuchsia);
 }
 
 .btn-download {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, var(--hot-fuchsia), var(--carmine));
     color: white;
     padding: 18px 30px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     margin-top: 20px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(248, 0, 77, 0.3);
 }
 
 .btn-download:hover {
-    background-color: #4b5d16;
+    background: linear-gradient(135deg, #ff1a66, #d41f4e);
+    box-shadow: 0 6px 20px rgba(248, 0, 77, 0.4);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 900px) {

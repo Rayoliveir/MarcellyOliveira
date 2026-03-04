@@ -6,6 +6,20 @@
     font-display: swap; 
 }
 
+:root {
+    /* Primary Color Palette */
+    --hot-fuchsia: #F8004D;
+    --wheat: #F3D8AF;
+    --cotton-rose: #EBBDBF;
+    --sunflower-gold: #E9B849;
+    --espresso: #4A2114;
+    --crimson-violet: #681B3A;
+    --almond-cream: #F4E3D4;
+    --carmine: #BA143A;
+    --space-indigo: #1B1C4B;
+    --toffee-brown: #915D3C;
+}
+
 .hero {
     height: 85vh; 
     display: flex;
@@ -23,18 +37,19 @@
 .hero-subtitle {
     display: block;
     font-family: 'Courier New', Courier, monospace; 
-    color: olive; 
+    color: var(--sunflower-gold); 
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-size: 14px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .hero-title {
     font-family: Ramadhan; 
     font-size: clamp(68px, 8vw, 400px); 
     font-weight: normal;
-    color: #1a1a1a;
+    color: var(--espresso);
     line-height: 1.1;
     margin-bottom: 30px;
 }
@@ -42,10 +57,10 @@
 .hero-description {
     font-family: sans-serif;
     font-size: 18px;
-    color: #666;
+    color: var(--toffee-brown);
     max-width: 600px;
     margin: 0 auto 40px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .hero-cta {
@@ -55,24 +70,35 @@
 }
 
 .btn-principal {
-    background-color: #4b5d16;
+    background: linear-gradient(135deg, var(--hot-fuchsia), var(--carmine));
     color: white;
-    padding: 15px 35px;
+    padding: 16px 40px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(248, 0, 77, 0.3);
 }
 
 .btn-secundario {
-    color: #1a1a1a;
-    padding: 15px 20px;
+    color: var(--espresso);
+    padding: 16px 30px;
     text-decoration: none;
     font-weight: 600;
     font-family: sans-serif;
+    border: 2px solid var(--cotton-rose);
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
 
 .btn-principal:hover {
     transform: translateY(-3px);
-    background-color: #3a4911;
+    box-shadow: 0 8px 25px rgba(248, 0, 77, 0.4);
+    background: linear-gradient(135deg, #ff1a66, #d41f4e);
+}
+
+.btn-secundario:hover {
+    background-color: var(--almond-cream);
+    border-color: var(--crimson-violet);
+    color: var(--crimson-violet);
 }

@@ -1,6 +1,20 @@
+:root {
+    /* Primary Color Palette */
+    --hot-fuchsia: #F8004D;
+    --wheat: #F3D8AF;
+    --cotton-rose: #EBBDBF;
+    --sunflower-gold: #E9B849;
+    --espresso: #4A2114;
+    --crimson-violet: #681B3A;
+    --almond-cream: #F4E3D4;
+    --carmine: #BA143A;
+    --space-indigo: #1B1C4B;
+    --toffee-brown: #915D3C;
+}
+
 .rodape {
     padding: 60px 10%;
-    border-top: 1px solid #eee; 
+    border-top: 1px solid var(--almond-cream); 
     background-color: #fff;
 }
 
@@ -37,15 +51,18 @@
     font-family: 'Courier New', Courier, monospace; 
     font-size: 12px;
     text-transform: uppercase;
+    color: var(--toffee-brown);
 }
 
 .autor {
-    color: olive; 
+    color: var(--crimson-violet); 
+    font-weight: 600;
 }
 
 .direitos {
-    color: olive;
+    color: var(--sunflower-gold);
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 @media (max-width: 600px) {

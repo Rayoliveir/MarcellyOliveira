@@ -5,6 +5,20 @@
     font-family: sans-serif; 
 }
 
+:root {
+    /* Primary Color Palette */
+    --hot-fuchsia: #F8004D;
+    --wheat: #F3D8AF;
+    --cotton-rose: #EBBDBF;
+    --sunflower-gold: #E9B849;
+    --espresso: #4A2114;
+    --crimson-violet: #681B3A;
+    --almond-cream: #F4E3D4;
+    --carmine: #BA143A;
+    --space-indigo: #1B1C4B;
+    --toffee-brown: #915D3C;
+}
+
 .sobre {
     display: flex;
     flex-direction: column;
@@ -20,20 +34,24 @@
 
 .superior span {
     font-size: 14px;
-    color: olive;
+    color: var(--sunflower-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .superior h3 {
     font-size: 48px;
     margin: 15px 0;
     font-family: serif; 
+    color: var(--espresso);
 }
 
 .superior p {
     font-size: 16px;
-    color: #666;
+    color: var(--toffee-brown);
     max-width: 800px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .cards {
@@ -56,17 +74,19 @@
     width: 24px;
     height: 24px;
     margin-bottom: 20px;
-    filter: sepia(1) saturate(5) hue-rotate(50deg); 
+    filter: sepia(1) saturate(3) hue-rotate(320deg);
 }
 
 .card h5 {
     font-size: 18px;
     margin-bottom: 15px;
     font-family: serif;
+    color: var(--crimson-violet);
 }
 
 .card p {
     font-size: 14px;
-    color: #777;
-    line-height: 1.5;
+    color: var(--toffee-brown);
+    line-height: 1.6;
 }
+

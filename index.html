@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -23,75 +23,102 @@
 <body>
     <header class="header">
         <div class="logo"><a href="#hero">MO</a></div>
+
         <nav class="nav-links">
-            <a href="#sobre">sobre mim</a>
-            <a href="#projetos">projetos</a>
-            <a href="#conhecimentos">conhecimentos</a>
-            <a href="#contato">contate-me</a>
+            <a href="#sobre" data-i18n="nav_about">sobre mim</a>
+            <a href="#projetos" data-i18n="nav_projects">projetos</a>
+            <a href="#conhecimentos" data-i18n="nav_knowledge">conhecimentos</a>
+            <a href="#contato" data-i18n="nav_contact">contate-me</a>
         </nav>
-        <div class="header-socials">
-            <a href="https://github.com/Rayoliveir" target="_blank" aria-label="GitHub"><i
-                    class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/seuusuario" target="_blank" aria-label="LinkedIn"><i
-                    class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://instagram.com/Ray_ol1" target="_blank" aria-label="Instagram"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+
+        <div class="header-right">
+            <div class="lang-selector">
+                <div class="dropdown">
+                    <button class="dropbtn" aria-label="Mudar Idioma">
+                        <i class="fa-solid fa-globe"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="changeLang('pt')">Português</a>
+                        <a href="#" onclick="changeLang('en')">English</a>
+                        <a href="#" onclick="changeLang('es')">Español</a>
+                        <a href="#" onclick="changeLang('de')">Deutsch</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-socials">
+                <a href="https://github.com/Rayoliveir" target="_blank" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/seuusuario" target="_blank" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/Ray_ol1" target="_blank" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook/" target="_blank" aria-label="Facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+            </div>
         </div>
+        <script src="assets/js/language.js"></script>
+        <script src="assets/js/animation.js"></script>
+        <script src="assets/js/responsive.js"></script>
     </header>
 
     <section class="hero" id="hero">
         <div class="hero-content">
-            <span class="hero-subtitle">Engenheira de Software & FullStack Developer</span>
+            <span class="hero-subtitle" data-i18n="hero_subtitle">Engenheira de Software & FullStack Developer</span>
             <h1 class="hero-title">Marcelly Oliveira</h1>
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="hero_description">
                 Transformando ideias complexas em experiências digitais simples e elegantes.
                 Especialista em desenvolvimento de sistemas e interfaces responsivas.
             </p>
             <div class="hero-cta">
-                <a href="#projetos" class="btn-principal">Ver Projetos</a>
-                <a href="#contato" class="btn-secundario">Vamos conversar ↗</a>
+                <a href="#projetos" class="btn-principal" data-i18n="btn_projects">Ver Projetos</a>
+                <a href="#contato" class="btn-secundario" data-i18n="btn_talk">Vamos conversar ↗</a>
             </div>
         </div>
     </section>
 
     <section class="sobre" id="sobre">
         <div class="superior">
-            <span>Sobre Mim</span>
-            <h3>Quem sou eu?</h3>
-            <p>Me chamo Marcelly Oliveira graduando no curso de Engenharia de Software e Técnico em Desenvolvimento de
+            <span data-i18n="about_span">Sobre Mim</span>
+            <h3 data-i18n="about_title">Quem sou eu?</h3>
+            <p data-i18n="about_text">Me chamo Marcelly Oliveira graduanda no curso de Engenharia de Software e Técnico em Desenvolvimento de
                 Sistemas e desenvolvedor FullStack. Desenvolvo páginas e sistemas web responsívos e de layout atrativo.
                 Tenho uma trajetória de cerca de 3 anos estudando na area de tecnologia, o que me tornou um profissional
                 dedicado e organizado. Hoje na área de desenvolvimento vivo o aprendizado continuo.</p>
         </div>
 
+
         <div class="cards">
+            <h4 data-i18n="academic_title" style="text-align: start; width: 100%; margin: 20px 0; font-size: 1.5rem; color: var(--cor-principal);">
+                Formações Acadêmicas
+            </h4>
+
             <div class="card">
                 <img src="assets/img/icons-livro.png" alt="book">
-                <h5>Engenharia de Software</h5>
-                <p>Unlock data-driven decisions with comprehensive analytics, revealing key opportunities for strategic
-                    regional growth.</p>
+                <h5 data-i18n="card_software">Bacharelado Engenharia de Software</h5>
+                <p data-i18n="card_software_text">Graduanda em Engenharia de Software, com sólida base em arquitetura de sistemas, metodologias ágeis e
+                    boas práticas de desenvolvimento.</p>
             </div>
 
             <div class="card">
                 <img src="assets/img/icons-livro.png" alt="book">
-                <h5>Desenvolvimento de Sistemas</h5>
-                <p>Manage and track satellite offices, ensuring consistent performance and streamlined operations
-                    everywhere.</p>
+                <h5 data-i18n="card_systems">Técnico Desenvolvimento de Sistemas</h5>
+                <p data-i18n="card_systems_text">Técnica em Desenvolvimento de Sistemas, com experiência prática em construção de aplicações web
+                    completas e responsivas.</p>
             </div>
 
             <div class="card">
                 <img src="assets/img/icons-livro.png" alt="book">
-                <h5>FordEnter - Programador Front-End</h5>
-                <p>Adapt to diverse markets with built-in localization for clear communication and enhanced user
-                    experience.</p>
+                <h5 data-i18n="card_front">FordEnter - Programador Front-End</h5>
+                <p data-i18n="card_front_text">Experiência em desenvolvimento front-end criando interfaces modernas, acessíveis e com layouts
+                    atrativos para o usuário.</p>
             </div>
 
             <div class="card">
                 <img src="assets/img/icons-livro.png" alt="book">
-                <h5>FordEnter - Programador Back-End</h5>
-                <p>Generate precise, visually compelling reports that illustrate your growth trajectories across all
-                    regions.</p>
+                <h5 data-i18n="card_back">FordEnter - Programador Back-End</h5>
+                <p data-i18n="card_back_text">Atuação no back-end desenvolvendo APIs robustas, integrações e lógica de negócio para sistemas web
+                    escaláveis.</p>
             </div>
         </div>
     </section>
@@ -99,9 +126,8 @@
     <section class="projetos" id="projetos">
         <div class="projetos-container">
             <div class="projetos-lista">
-                <h2>Projetos</h2>
+                <h2 data-i18n="projects_title">Projetos</h2>
 
-                <!-- portifolio -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
 
@@ -111,8 +137,10 @@
                                     <img src="assets/img/portifolio.png" alt="Projeto 1">
                                     <div class="card-overlay">
                                         <div class="projeto-links">
-                                            <a href="https://github.com/Rayoliveir/Portifolio/" target="_blank"><i class="fab fa-github"></i></a>
-                                            <a href="https://portifolio-rosy-nu-81.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                            <a href="https://github.com/Rayoliveir/Portifolio/" target="_blank"><i
+                                                    class="fab fa-github"></i></a>
+                                            <a href="https://portifolio-rosy-nu-81.vercel.app/" target="_blank"><i
+                                                    class="fas fa-external-link-alt"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +155,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- CodeSpark -->
+
                         <div class="swiper-slide">
                             <div class="projeto-card">
                                 <div class="card-image">
@@ -151,7 +179,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- desafio 20 dias -->
+
                         <div class="swiper-slide">
                             <div class="projeto-card">
                                 <div class="card-image">
@@ -173,7 +201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- GuitarWave -->
+
                         <div class="swiper-slide">
                             <div class="projeto-card">
                                 <div class="card-image">
@@ -187,12 +215,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card-content">
                                     <span class="projeto-tag">Frontend</span>
                                     <h3>Guitar Wave</h3>
                                     <div class="projeto-techs">
-                                        <!-- <i class="devicon-figma-plain"></i> -->
                                         <i class="devicon-html5-plain"></i>
                                         <i class="devicon-css3-plain"></i>
                                         <i class="devicon-javascript-plain"></i>
@@ -211,57 +238,60 @@
     </section>
 
     <section class="conhecimentos" id="conhecimentos">
-        <div class="superior-centro">
-            <!-- <span>Specs</span> -->
-            <h3>Conhecimentos</h3>
-            <p>You need a solution that keeps up. That’s why we developed Area. A developer-friendly approach to
-                streamline your business.</p>
+    <div class="superior-centro">
+        <h3 data-i18n="knowledge_title">Conhecimentos</h3>
+        <p data-i18n="knowledge_desc"></p>
+    </div>
+
+    <div class="bento-grid">
+        <div class="bento-item frontend">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <h3>Front-end</h3>
+            <div class="tags">
+                <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+                <span><i class="devicon-angularjs-plain colored"></i> Angular</span>
+                <span><i class="devicon-react-original colored"></i> React.js</span>
+                <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+            </div>
         </div>
 
-        <div class="tabela-container">
-            <table class="tabela-specs">
-                <thead>
-                    <tr>
-                        <th class="destaque-col">Front-End</th>
-                        <th>Back-End</th>
-                        <th>Datascience</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="destaque-col">✓ HTML5</td>
-                        <td>✓ Java</td>
-                        <td>✓ Python</td>
-                    </tr>
-                    <tr>
-                        <td class="destaque-col">✓ CSS3</td>
-                        <td>✓ C#</td>
-                        <td>✓ ...</td>
-                    </tr>
-                    <tr>
-                        <td class="destaque-col">✓ Angular</td>
-                        <td>✓ SpringBoot</td>
-                        <td>✓ Pandas</td>
-                    </tr>
-                    <tr>
-                        <td class="destaque-col">✓ ...</td>
-                        <td>✓ ...</td>
-                        <td>✓ ...</td>
-                    </tr>
-                    <tr>
-                        <td class="destaque-col">✓ ...</td>
-                        <td>✓ ...</td>
-                        <td>✓ ...</td>
-                    </tr>
-                    <tr>
-                        <td class="destaque-col">✓ ...</td>
-                        <td>✓ ...</td>
-                        <td>✓ ...</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="bento-item backend">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <h3>Back-end</h3>
+            <div class="tags">
+                <span><i class="devicon-java-plain colored"></i> Java</span>
+                <span><i class="devicon-csharp-plain colored"></i> C#</span>
+                <span><i class="devicon-spring-plain colored"></i> SpringBoot</span>
+                <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            </div>
         </div>
-    </section>
+
+        <div class="bento-item tools">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <h3>Data Science & Cloud</h3>
+            <div class="tags">
+                <span><i class="devicon-python-plain colored"></i> Python</span>
+                <span><i class="devicon-pandas-plain colored"></i> Pandas</span>
+                <span><i class="devicon-postgresql-plain colored"></i> SQL</span>
+                <span><i class="devicon-docker-plain colored"></i> Docker</span>
+                <span><i class="devicon-git-plain colored"></i> Git</span>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="quote-section">
         <div class="quote-container">
@@ -270,7 +300,7 @@
             </div>
 
             <div class="quote-content">
-                <blockquote>
+                <blockquote data-i18n="quote_text">
                     "We keep moving forward, opening up new doors and doing new things, because we’re curious ... and
                     curiosity keeps leading us down new paths."
                 </blockquote>
@@ -282,9 +312,9 @@
     <section id="contato" class="contato-mercado">
         <div class="contato-wrapper">
             <div class="contato-info">
-                <span class="tag">Disponível para projetos</span>
-                <h2>Vamos construir algo <br> extraordinário juntos.</h2>
-                <p>Seja para uma oportunidade de engenharia de software ou um projeto FullStack do zero, estou pronta
+                <span class="tag" data-i18n="contact_tag">Disponível para projetos</span>
+                <h2 data-i18n="contact_title">Vamos construir algo <br> extraordinário juntos.</h2>
+                <p data-i18n="contact_desc">Seja para uma oportunidade de engenharia de software ou um projeto FullStack do zero, estou pronta
                     para elevar o nível da sua solução digital.</p>
             </div>
 
@@ -306,8 +336,8 @@
                     <p class="cidade">Brasil — Remoto / Híbrido</p>
                 </div>
 
-                <a href="./seu-curriculo.pdf" download class="btn-download">
-                    <i class="fa-solid fa-file-pdf"></i> Baixar CV (PDF)
+                <a href="assets/Curriculo_Marcelly_Rayla_Oliveira.pdf" download class="btn-download">
+                    <i class="fa-solid fa-file-pdf"></i> <span data-i18n="download_cv">Baixar CV (PDF)</span>
                 </a>
             </div>
         </div>
@@ -315,19 +345,11 @@
 
     <footer class="rodape">
         <div class="rodape-container">
-            <!-- <nav class="rodape-nav">
-                <a href="#">sobre mim</a>
-                <a href="#">projetos</a>
-                <a href="#">conhecimentos</a>
-            </nav> -->
-
             <div class="rodape-copy">
                 <p class="autor">&copy; Marcelly Oliveira 2026</p>
-                <p class="direitos">TODOS DIREITOS RESERVADOS</p>
+                <p class="direitos" data-i18n="footer_rights">TODOS DIREITOS RESERVADOS</p>
             </div>
         </div>
     </footer>
 </body>
-
-
 </html>
