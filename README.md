@@ -31,7 +31,7 @@ Para este projeto, escolhi ferramentas que permitem uma experiência rápida, mo
 
 Você pode acessar o portfólio online através do link abaixo:
 
-👉 **https://marcelly-oliveira.vercel.app/**
+👉 **<a href="https://marcelly-oliveira.vercel.app/">Pórtifolio Marcelly Oliveira</a>**
 
 ---
 
