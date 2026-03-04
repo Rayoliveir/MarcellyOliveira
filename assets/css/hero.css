@@ -89,6 +89,14 @@
     border: 2px solid var(--cotton-rose);
     border-radius: 50px;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-secundario i {
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
 }
 
 .btn-principal:hover {
@@ -101,4 +109,8 @@
     background-color: var(--almond-cream);
     border-color: var(--crimson-violet);
     color: var(--crimson-violet);
+}
+
+.btn-secundario:hover i {
+    transform: translate(3px, -3px);
 }
