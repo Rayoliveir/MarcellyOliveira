@@ -1,4 +1,3 @@
-// Scroll Animation Controller
 class ScrollAnimations {
     constructor() {
         this.observerOptions = {
@@ -11,23 +10,19 @@ class ScrollAnimations {
     }
 
     init() {
-        // Add animation classes to sections
         this.addAnimationClasses();
         
-        // Create intersection observer
         const observer = new IntersectionObserver(
             this.handleIntersection.bind(this),
             this.observerOptions
         );
 
-        // Observe all animated elements
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
     }
 
     addAnimationClasses() {
-        // Sections to animate
         const sections = [
             '.hero-content',
             '.sobre',
@@ -47,7 +42,6 @@ class ScrollAnimations {
             });
         });
 
-        // Stagger animation for cards
         document.querySelectorAll('.card').forEach((card, index) => {
             card.classList.add('animate-on-scroll');
             card.style.opacity = '0';
@@ -55,7 +49,6 @@ class ScrollAnimations {
             card.style.transition = `opacity 0.6s ease, transform 0.6s ease ${index * 0.15}s`;
         });
 
-        // Stagger animation for bento items
         document.querySelectorAll('.bento-item').forEach((item, index) => {
             item.style.opacity = '0';
             item.style.transform = 'translateY(20px)';
@@ -74,12 +67,10 @@ class ScrollAnimations {
     }
 }
 
-// Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new ScrollAnimations();
 });
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();

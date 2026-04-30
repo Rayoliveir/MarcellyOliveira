@@ -1,4 +1,3 @@
-// Responsive Design Controller
 class ResponsiveManager {
     constructor() {
         this.breakpoints = {
@@ -15,23 +14,17 @@ class ResponsiveManager {
     }
 
     init() {
-        // Initial setup
         this.setup();
         
-        // Event listeners
         window.addEventListener('resize', this.debounce(this.handleResize.bind(this), 250));
         window.addEventListener('load', this.handleLoad.bind(this));
         
-        // Mobile menu toggle
         this.createMobileMenuToggle();
         
-        // Touch interactions
         this.setupTouchInteractions();
         
-        // Responsive images
         this.optimizeImages();
         
-        // Dynamic font sizing
         this.adjustFontSizes();
     }
 
@@ -61,7 +54,6 @@ class ResponsiveManager {
             this.currentBreakpoint = newBreakpoint;
             this.setup();
             
-            // Dispatch custom event for other scripts to listen
             window.dispatchEvent(new CustomEvent('breakpointChange', { 
                 detail: { breakpoint: newBreakpoint } 
             }));
@@ -79,11 +71,9 @@ class ResponsiveManager {
     setup() {
         const breakpoint = this.currentBreakpoint;
         
-        // Apply breakpoint-specific classes to body
         document.body.classList.remove('breakpoint-mobile', 'breakpoint-tablet', 'breakpoint-desktop');
         document.body.classList.add(`breakpoint-${breakpoint}`);
         
-        // Adjust layouts based on breakpoint
         switch(breakpoint) {
             case 'mobile':
                 this.setupMobileLayout();
@@ -98,30 +88,25 @@ class ResponsiveManager {
     }
 
     setupMobileLayout() {
-        // Stack all cards vertically
         document.querySelectorAll('.cards').forEach(container => {
             container.style.flexDirection = 'column';
             container.style.alignItems = 'center';
         });
 
-        // Single column grid
         document.querySelectorAll('.bento-grid').forEach(grid => {
             grid.style.gridTemplateColumns = '1fr';
         });
 
-        // Full width contact wrapper
         document.querySelectorAll('.contato-wrapper').forEach(wrapper => {
             wrapper.style.gridTemplateColumns = '1fr';
             wrapper.style.gap = '40px';
         });
 
-        // Adjust hero layout
         const heroContent = document.querySelector('.hero-content');
         if (heroContent) {
             heroContent.style.padding = '0 15px';
         }
 
-        // Stack quote section
         document.querySelectorAll('.quote-container').forEach(container => {
             container.style.flexDirection = 'column';
             container.style.textAlign = 'center';
@@ -129,19 +114,16 @@ class ResponsiveManager {
     }
 
     setupTabletLayout() {
-        // Two columns for cards
         document.querySelectorAll('.cards').forEach(container => {
             container.style.flexDirection = 'row';
             container.style.flexWrap = 'wrap';
             container.style.justifyContent = 'center';
         });
 
-        // Two column bento grid
         document.querySelectorAll('.bento-grid').forEach(grid => {
             grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
         });
 
-        // Two column contact
         document.querySelectorAll('.contato-wrapper').forEach(wrapper => {
             wrapper.style.gridTemplateColumns = '1fr 1fr';
             wrapper.style.gap = '60px';
@@ -149,18 +131,15 @@ class ResponsiveManager {
     }
 
     setupDesktopLayout() {
-        // Original layout maintained
         document.querySelectorAll('.cards').forEach(container => {
             container.style.flexDirection = '';
             container.style.flexWrap = '';
         });
 
-        // Original bento grid
         document.querySelectorAll('.bento-grid').forEach(grid => {
             grid.style.gridTemplateColumns = '1.2fr 1fr';
         });
 
-        // Original contact layout
         document.querySelectorAll('.contato-wrapper').forEach(wrapper => {
             wrapper.style.gridTemplateColumns = '1.2fr 0.8fr';
             wrapper.style.gap = '80px';
@@ -170,7 +149,6 @@ class ResponsiveManager {
     adjustGridLayout() {
         const breakpoint = this.currentBreakpoint;
         
-        // Projects carousel adjustment
         const projectCards = document.querySelectorAll('.projeto-card');
         projectCards.forEach(card => {
             if (breakpoint === 'mobile') {
@@ -189,21 +167,18 @@ class ResponsiveManager {
         
         document.documentElement.style.fontSize = `${baseSize}px`;
         
-        // Hero title responsive sizing
         const heroTitle = document.querySelector('.hero-title');
         if (heroTitle) {
             const titleSize = width <= 768 ? 'clamp(48px, 12vw, 80px)' : 'clamp(68px, 8vw, 400px)';
             heroTitle.style.fontSize = titleSize;
         }
         
-        // Section headings
         document.querySelectorAll('.superior h3, .projetos h2, .superior-centro h3').forEach(heading => {
             heading.style.fontSize = width <= 768 ? '32px' : '';
         });
     }
 
     createMobileMenuToggle() {
-        // Check if mobile menu toggle already exists
         if (document.querySelector('.mobile-menu-toggle')) return;
         
         const header = document.querySelector('.header');
@@ -228,7 +203,6 @@ class ResponsiveManager {
             z-index: 1001;
         `;
         
-        // Add hamburger line styles
         const style = document.createElement('style');
         style.textContent = `
             .hamburger-line {
@@ -281,7 +255,6 @@ class ResponsiveManager {
                 navLinks.classList.toggle('active');
                 toggle.classList.toggle('active');
                 
-                // Animate hamburger
                 const lines = toggle.querySelectorAll('.hamburger-line');
                 if (this.menuOpen) {
                     lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -297,7 +270,6 @@ class ResponsiveManager {
     }
 
     setupTouchInteractions() {
-        // Add touch-friendly hover states
         document.querySelectorAll('.btn-principal, .btn-secundario, .projeto-links a, .link-direto').forEach(el => {
             el.addEventListener('touchstart', function() {
                 this.style.transform = 'scale(0.98)';
@@ -308,7 +280,6 @@ class ResponsiveManager {
             });
         });
         
-        // Prevent zoom on double tap
         document.addEventListener('dblclick', function(event) {
             event.preventDefault();
         }, { passive: false });
@@ -318,14 +289,12 @@ class ResponsiveManager {
         const width = window.innerWidth;
         const pixelRatio = window.devicePixelRatio || 1;
         
-        // Lazy loading for images
         document.querySelectorAll('img').forEach(img => {
             if (width <= this.breakpoints.tablet) {
                 img.loading = 'lazy';
             }
         });
         
-        // Optimize image quality based on screen size
         document.querySelectorAll('.card-image img').forEach(img => {
             if (width <= this.breakpoints.tablet) {
                 img.style.objectPosition = 'center';
@@ -333,7 +302,6 @@ class ResponsiveManager {
         });
     }
 
-    // Utility: Check if element is in viewport
     isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
@@ -344,18 +312,15 @@ class ResponsiveManager {
         );
     }
 
-    // Utility: Get current orientation
     getOrientation() {
         return window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
     }
 }
 
-// Initialize responsive manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.responsiveManager = new ResponsiveManager();
 });
 
-// Handle orientation change
 window.addEventListener('orientationchange', () => {
     setTimeout(() => {
         window.dispatchEvent(new Event('resize'));
